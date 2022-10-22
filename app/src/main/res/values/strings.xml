@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Estical</string>
+    <string name="total_projects">Total Projects</string>
+    <string name="estimation">Estimation</string>
+    <string name="dumb_text">The quick brown fox jumps over the the lazy dog</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_description">Project description(Optional)</string>
+    <string name="item_description">Item description(Optional)</string>
+    <string name="required">Required</string>
+    <string name="total_items">Total Items</string>
+    <string name="item_name">Item Name</string>
+    <string name="unit_price">Unit Price</string>
+    <string name="quantity">Quantity</string>
+</resources>

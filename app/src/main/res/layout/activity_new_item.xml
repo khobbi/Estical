@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".NewProjectActivity">
+
+    <TextView
+        android:id="@+id/tvProjectTitle"
+        style="@style/textTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/project_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieItemName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/item_name"
+            android:inputType="text|textAutoCorrect|textCapWords"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilItemDescription"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilItemName">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="3"
+            android:hint="@string/item_description"
+            android:inputType="text|textAutoCorrect|textCapSentences"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilItemEstimate"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilItemDescription">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieItemEstimate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:hint="@string/unit_price"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilItemQuantity"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilItemEstimate">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieItemQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:hint="@string/quantity"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgItemImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/fl_studio_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilItemQuantity" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgItemImg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

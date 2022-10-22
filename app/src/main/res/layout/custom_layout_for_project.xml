@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardProjectContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    app:contentPadding="10dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgProjectImage"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Project Image"
+            android:src="@drawable/fl_studio_logo"
+            app:layout_constraintEnd_toStartOf="@+id/imgOptions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgOptions"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgExpandOrCollapse"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_expand_less_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgProjectImage" />
+
+
+        <TextView
+            android:id="@+id/tvProjectTitle"
+            style="@style/textTopic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Project Title"
+            app:layout_constraintEnd_toStartOf="@+id/imgExpandOrCollapse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgProjectImage" />
+
+        <TextView
+            android:id="@+id/tvProjectEstimate"
+            style="@style/textMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:text="$120.00"
+            app:layout_constraintEnd_toStartOf="@+id/imgExpandOrCollapse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProjectTitle" />
+
+        <View
+            android:id="@+id/vSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProjectEstimate"/>
+
+        <TextView
+            android:id="@+id/tvProjectDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/dumb_text"
+            android:textColor="@color/brown_300"
+            app:layout_constraintEnd_toStartOf="@+id/progProjectPercentage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparator" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progProjectPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progress="80"
+            android:max="100"
+            android:progressTint="@color/grey_900"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vSeparator" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

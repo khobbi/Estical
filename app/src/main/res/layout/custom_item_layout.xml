@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardItemContainer"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    app:contentPadding="10dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="8dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgItemImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/fl_studio_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvItemTitle"
+        style="@style/textTopic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:text="Item title"
+        app:layout_constraintEnd_toStartOf="@+id/imgOptionsItem"
+        app:layout_constraintStart_toEndOf="@+id/imgItemImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemEstimate"
+        style="@style/textMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:text="$120.00"
+        android:gravity="start"
+        app:layout_constraintEnd_toStartOf="@+id/imgOptionsItem"
+        app:layout_constraintStart_toEndOf="@+id/imgItemImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemTitle" />
+
+    <TextView
+        android:id="@+id/tvItemQuantitytv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:text="Quantity:"
+        android:textColor="@color/brown_300"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemEstimate" />
+
+    <TextView
+        android:id="@+id/tvUnitPricetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="Unit Price:"
+        android:textColor="@color/brown_300"
+        app:layout_constraintStart_toEndOf="@+id/tvItemQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemEstimate" />
+
+    <TextView
+        android:id="@+id/tvItemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:gravity="start"
+        android:text="2"
+        android:textColor="@color/brown_300"
+        app:layout_constraintStart_toEndOf="@+id/tvItemQuantitytv"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemEstimate" />
+
+    <TextView
+        android:id="@+id/tvUnitPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:gravity="start"
+        android:text="$20.00"
+        android:textColor="@color/brown_300"
+        app:layout_constraintStart_toEndOf="@+id/tvUnitPricetv"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemEstimate" />
+
+    <TextView
+        android:id="@+id/tvItemDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:text="@string/dumb_text"
+        android:textColor="@color/brown_300"
+        app:layout_constraintEnd_toStartOf="@+id/progItemPercentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemQuantity" />
+
+    <ImageView
+        android:id="@+id/imgOptionsItem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progItemPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemEstimate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

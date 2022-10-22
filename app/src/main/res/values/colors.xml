@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brown_500">#795548</color>
+    <color name="brown_700">#5D4037</color>
+    <color name="brown_300">#A1887F</color>
+    <color name="brown_100">#D7CCC8</color>
+    <color name="brown_50">#EFEBE9</color>
+    <color name="orange_200">#ffcc80</color>
+    <color name="orange_100">#ffe0b2</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="orange_700">#F57C00</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_900">#212121</color>
+    <color name="deep_orange_700">#E64A19</color>
+</resources>
