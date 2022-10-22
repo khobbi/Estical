@@ -9,5 +9,10 @@ To help gather individual projects and their assiciated requirements (items need
 ### Tools
 * Android Studio
 ### Languages
-* Kotlin
+#### FrontEnd
 * XML
+#### BackEnd
+* Kotlin
+## Screenshots
+![App Screenshot](https://github.com/khobbi/Estical/blob/6f0fecb6f949c0bfcdbdc90094b8eb83e77d9075/screenshots/Estical1.jpg)
+![App Screenshot](https://github.com/khobbi/Estical/blob/6f0fecb6f949c0bfcdbdc90094b8eb83e77d9075/screenshots/Estical2.jpg)
